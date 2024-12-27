@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+
+results/
+screenshots/
 # Файлы конфигурации для venv
 venv/
 .env

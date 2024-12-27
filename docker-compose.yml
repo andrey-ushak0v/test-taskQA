@@ -1,0 +1,10 @@
+services:
+  tests_chat:
+    build: .
+    image: tests_chat
+    container_name: pytest_runner
+    environment:
+      - ENV=dev
+    volumes:
+      - .:/app/
+    
