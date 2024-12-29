@@ -22,4 +22,15 @@ def attach_playwright_results(page: Page, request: FixtureRequest):
             attachment_type=allure.attachment_type.PNG,
         )
         
-
+#@pytest.hookimpl(trylast=True, hookwrapper=True)
+#def pytest_runtest_makereport(item):
+#outcome = yield
+#page = item.funcargs.get("page")
+#report = outcome.get_result()
+#if report.when == 'call' and report.outcome == "failed":
+#    screenshot_path = f"screenshots/123.png"
+#    allure.attach.file(
+#        page.screenshot(path=screenshot_path),
+#        name="Screen shot on failure",
+#        attachment_type=allure.attachment_type.PNG,
+#    )
